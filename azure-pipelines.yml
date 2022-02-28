@@ -10,14 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: CmdLine@2
   inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'compile'
-    options: 'exec:java -Demail.from=duytest123@outlook.com -Demail.to=duy.luong@katalon.com -Demail.username=duytest123@outlook.com -Demail.password=yolo@2016'
-    publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    script: 'mvn compile exec:java -Demail.from=duytest123@outlook.com -Demail.to=duy.luong@katalon.com -Demail.username=duytest123@outlook.com -Demail.password=yolo@2016'
