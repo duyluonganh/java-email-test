@@ -10,10 +10,12 @@ public class Main {
     public static void main(String [] args) throws Exception {
 
         // Recipient's email ID needs to be mentioned.
-        String to = System.getProperty("email.to");
+        String to = "recipient-email";
 
         // Sender's email ID needs to be mentioned
-        String from = System.getProperty("email.from");
+        String from = "user-email";
+        String username = "user-email";
+        String password = "user-password";
 
         // Get system properties
         Properties properties = System.getProperties();
@@ -31,8 +33,7 @@ public class Main {
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(System.getProperty("email.username"),
-                        System.getProperty("email.password"));
+                return new PasswordAuthentication(username, password);
             }
         });
 

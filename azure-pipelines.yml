@@ -12,4 +12,4 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'mvn compile exec:java -Demail.from=duytest123@outlook.com -Demail.to=duy.luong@katalon.com -Demail.username=duytest123@outlook.com -Demail.password=yolo@2016'
+    script: 'mvn compile exec:java'
