@@ -9,11 +9,9 @@ public class Main {
 
     public static void main(String [] args) throws Exception {
 
-        // Recipient's email ID needs to be mentioned.
-        String to = "recipient-email";
-
         // Sender's email ID needs to be mentioned
         String from = "user-email";
+        String to = "recipient-email";
         String username = "user-email";
         String password = "user-password";
 
